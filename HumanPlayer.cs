@@ -7,7 +7,7 @@ namespace ShootingDice
     // A player the prompts the user to enter a number for a roll
     public class HumanPlayer : Player
     {
-         public override int Roll()
+         public override int Roll(int other)
         {
             // Return a random number between 1 and DiceSize
             int roll;
