@@ -14,11 +14,12 @@ namespace ShootingDice
             Player player1 = new HumanPlayer();
             player1.Name = "Human";
 
-            Player smack = new SmackTalkingPlayer();
+            SmackTalkingPlayer smack = new SmackTalkingPlayer();
             smack.Name = "Sue";
+            smack.Taunt = "you are gonna need a boat";
 
             smack.Play(player1);
-
+            
             Console.WriteLine("-------------------");
 
             Player player3 = new OneHigherPlayer();
@@ -35,8 +36,15 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
+
+            CreativeSmackTalkingPlayer creative = new CreativeSmackTalkingPlayer();
+            creative.Taunts.Add("Your mother was a hamster");
+            creative.Taunts.Add("Are you even trying?");
+            creative.Taunts.Add("Im almost asleep over here");
+            creative.Taunts.Add("Watch out Im playing here...");
+            creative.Name = "zenith";
             List<Player> players = new List<Player>() {
-                player1, smack, player3, large
+                player1, smack, player3, large, creative
             };
 
             PlayMany(players);

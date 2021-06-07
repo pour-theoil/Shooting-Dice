@@ -9,10 +9,13 @@ namespace ShootingDice
     {
         public string Taunt { get; set; }
 
-        public override void Play(Player other)
+         public override int Roll()
         {
+            // Return a random number between 1 and DiceSize
             Console.WriteLine($"Smack talking play shouts a taunt... {Taunt}");
-            base.Play(other);
+            return new Random().Next(DiceSize) + 1;
         }
+        
+    
     }
 }
