@@ -8,18 +8,18 @@ namespace ShootingDice
     {
         static void Main(string[] args)
         {
-
+            Console.Clear();
             Player player1 = new Player();
             player1.Name = "Bob";
 
-            SmackTalkingPlayer player2 = new SmackTalkingPlayer();
+            Player player2 = new SmackTalkingPlayer();
             player2.Name = "Sue";
 
             player2.Play(player1);
 
             Console.WriteLine("-------------------");
 
-            Player player3 = new Player();
+            Player player3 = new OneHigherPlayer();
             player3.Name = "Wilma";
 
             player3.Play(player2);
