@@ -7,7 +7,9 @@ namespace ShootingDice
     class Program
     {
         static void Main(string[] args)
+
         {
+        
             Console.Clear();
             Player player1 = new HumanPlayer();
             player1.Name = "Human";
