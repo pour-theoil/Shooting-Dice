@@ -13,7 +13,7 @@ namespace ShootingDice
         {
             // Call roll for "this" object and for the "other" object
             int myRoll = Roll();
-            int otherRoll = myRoll +1;
+            int otherRoll = myRoll - 1;
 
             Console.WriteLine($"{Name} rolls a {myRoll}");
             Console.WriteLine($"{other.Name} rolls a {otherRoll}");
